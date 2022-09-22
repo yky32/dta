@@ -1,4 +1,4 @@
-import MainLayout from '../layouts/main'
+import MainLayout from '../layouts/mainLayout'
 
 const Home = () => (
   <div>
