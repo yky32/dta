@@ -1,21 +1,25 @@
 import Image from "next/image"
 
-interface Props{
-  title: String
-  tags: String[]
+interface Props {
+  title: string
+  gameImageUrl: string
+  tags: string[]
 }
-function GameCard({title, tags}: Props) {
+function GameCard({ title, gameImageUrl, tags }: Props) {
   return (
-    <div>
-      {title} <br/>
-      {tags}
-
+    <div className="card relative">
       <Image
-        src={`https://cdn.discordapp.com/attachments/1022347629344063581/1022347699422503003/d681acd50b03a07815103f41543abba8.jpeg`}
-        className="rounded-sm object-cover md:rounded"
-        width={250}
-        height={250}
-      />
+          src={gameImageUrl}
+          className="object-cover rounded-3xl"
+          layout="fill"
+        />
+      <div className="absolute w-full h-1/5 bottom-0 rounded-bl-3xl rounded-br-3xl bg-gray-400 bg-opacity-40">
+        <div className="flex gap-x-1 h-full items-center px-5 text-slate-500 ">
+          <div>{title}</div> 
+          <div>{tags}</div>
+        </div>
+      </div>
+
     </div>
   )
 }
