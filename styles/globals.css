@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+ 
+}
 
 @layer components {
   .card {
-    @apply
-    border-gray-300
+    @apply border-gray-300
     rounded-3xl
     w-full
-    h-full
-    ; 
+    h-full;
   }
 }

@@ -1,6 +1,7 @@
 import type { LayoutProps } from '../types/pageWithLayouts'
 import Head from 'next/head'
-import NavigationBar from '../components/navbar'
+import { Navbar } from '../components/navbar'
+
 
 const MainLayout: LayoutProps = ({ children }) => {
   return (
@@ -12,7 +13,7 @@ const MainLayout: LayoutProps = ({ children }) => {
       </Head>
       
       <main>
-        <NavigationBar/>
+        <Navbar/>
         {children}
       </main>
 
