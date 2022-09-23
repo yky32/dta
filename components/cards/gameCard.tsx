@@ -20,7 +20,7 @@ function GameCard({ title, gameImageUrl, tags }: Props) {
 
       <div className="flex items-center gap-x-2 px-4 h-1/6"> {/* game info */}
         {tags.map((tag, key) => (
-          <div className="bg-gray-400 bg-opacity-10 rounded-md text-primary-1 text-lg">{tag}</div>
+          <div key={key} className="bg-gray-400 bg-opacity-10 rounded-md text-primary-1 text-lg">{tag}</div>
         ))}
 
         <div className="text-lg">{title}</div>
