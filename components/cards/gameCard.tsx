@@ -7,22 +7,24 @@ interface Props {
 }
 function GameCard({ title, gameImageUrl, tags }: Props) {
   return (
-    <div className="card relative">
-      <Image
+    <div className="bg-white cursor-pointer bg-opacity-10 h-60 min-h-fit rounded-lg"
+      onClick={() => alert("123")}
+    >
+      <div className="relative h-5/6 ">
+        <Image
           src={gameImageUrl}
-          className="object-cover rounded-3xl"
+          className="rounded-lg object-cover"
           layout="fill"
-          alt=""
         />
-      <div className="absolute w-full h-1/5 bottom-0 rounded-bl-3xl rounded-br-3xl bg-gray-400 bg-opacity-40">
-        <div className="flex gap-x-1 h-full items-center px-5 text-slate-500 ">
-          <div>{title}</div> 
-          {tags.map((tag) =>(
-            tag
-          ))}
-        </div>
       </div>
 
+      <div className="flex items-center gap-x-2 px-4 h-1/6"> {/* game info */}
+        {tags.map((tag, key) => (
+          <div className="bg-gray-400 bg-opacity-10 rounded-md text-primary-1">{tag}</div>
+        ))}
+
+        <div className="text-lg">{title}</div>
+      </div>
     </div>
   )
 }
