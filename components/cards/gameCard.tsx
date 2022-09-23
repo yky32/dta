@@ -11,7 +11,7 @@ interface Props {
 }
 function GameCard({ title, gameImageUrl, players, tags }: Props) {
   return (
-    <div className="relative bg-white cursor-pointer bg-opacity-10 h-fit rounded-lg "
+    <div className="relative bg-white cursor-pointer bg-opacity-20 h-fit rounded-xl "
       onClick={() => alert("123")}
     >
       <div className="relative h-52">
@@ -24,9 +24,9 @@ function GameCard({ title, gameImageUrl, players, tags }: Props) {
 
       <div className="px-4 py-4 space-y-1"> {/* game info */}
         <div className="flex items-center gap-x-3">
-          <div className="text-3xl"><HiInformationCircle/></div>
-          <div className="text-2xl">{title} </div>
-          <div className="text-3xl"><BsPeopleFill/></div>
+          <div className="text-3xl text-gray-400"><HiInformationCircle/></div>
+          <div className="text-2xl text-secondary-2">{title} </div>
+          <div className="text-3xl text-gray-400"><BsPeopleFill/></div>
           <div className="text-2xl text-secondary-2"> {players}+</div>
         </div>
 
