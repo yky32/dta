@@ -2,7 +2,7 @@ import MainLayout from '../layouts/mainLayout'
 
 const InternalError = () => (
   <div>
-    abc
+    This is 500.
   </div>
 )
 

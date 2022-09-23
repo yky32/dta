@@ -1,8 +1,9 @@
+import GameCard from '../components/cards/gameCard'
 import MainLayout from '../layouts/mainLayout'
 
 const Home = () => (
-  <div>
-    abc
+  <div className='p-8'>
+    haha
   </div>
 )
 

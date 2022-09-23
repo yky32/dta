@@ -2,7 +2,7 @@ import MainLayout from '../layouts/mainLayout'
 
 const NotFound = () => (
   <div>
-    abc
+    This is 404.
   </div>
 )
 
