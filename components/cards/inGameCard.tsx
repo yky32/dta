@@ -3,25 +3,16 @@ import {
   HiInformationCircle, HiOutlineHashtag
 } from "react-icons/hi";
 import { BsPeopleFill } from "react-icons/bs";
-import { useRouter } from 'next/router'
-
 interface Props {
   title: string
-  gameId: number
   players: number
   gameImageUrl: string
   tags: string[]
 }
-function GameCard({ title, gameId, gameImageUrl, players, tags }: Props) {
-  const router = useRouter()
-
-  const handleClick = (id: number) => {
-    router.push(`/games/${id}`);
-  }
-
+function GameCard({ title, gameImageUrl, players, tags }: Props) {
   return (
     <div className="relative bg-white cursor-pointer bg-opacity-20 h-fit rounded-xl "
-      onClick={() => handleClick(gameId)}
+      onClick={() => alert("123")}
     >
       <div className="relative h-52">
         <Image

@@ -5,6 +5,7 @@ import MainLayout from '../layouts/mainLayout'
 const Home = () => {
   const games = [
     {
+      id: 1,
       title: '狼人殺',
       players: 9,
       gameImageUrl: 'https://cdn.discordapp.com/attachments/1022347629344063581/1022347699422503003/d681acd50b03a07815103f41543abba8.jpeg',
@@ -26,6 +27,7 @@ const Home = () => {
           {games.map((game, index) =>
             <GameCard
               key={index} 
+              gameId={game.id}
               title={game.title}
               players={game.players}
               gameImageUrl={game.gameImageUrl} 
