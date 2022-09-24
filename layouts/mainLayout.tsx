@@ -11,10 +11,10 @@ const MainLayout: LayoutProps = ({ children }) => {
         <meta name="description" content="Don't Trust Anyone" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <main>
         <Navbar/>
-        <div className='px-8 py-3 bg-bg-1 h-screen'>
+        <div className='px-8 py-6 bg-bg-1 h-screen'>
           {children}
         </div>
       </main>

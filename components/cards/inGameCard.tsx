@@ -3,16 +3,24 @@ import {
   HiInformationCircle, HiOutlineHashtag
 } from "react-icons/hi";
 import { BsPeopleFill } from "react-icons/bs";
+import { useRouter } from 'next/router'
+
 interface Props {
   title: string
-  players: number
+  gameId: number
   gameImageUrl: string
-  tags: string[]
+  status: string
 }
-function GameCard({ title, gameImageUrl, players, tags }: Props) {
+function InGameCard({ title, gameId, gameImageUrl, status}: Props) {
+  const router = useRouter()
+
+  const handleClick = (id: number) => {
+    
+  }
+
   return (
     <div className="relative bg-white cursor-pointer bg-opacity-20 h-fit rounded-xl "
-      onClick={() => alert("123")}
+      onClick={() => handleClick(gameId)}
     >
       <div className="relative h-52">
         <Image
@@ -27,18 +35,15 @@ function GameCard({ title, gameImageUrl, players, tags }: Props) {
           <div className="text-3xl text-gray-400"><HiInformationCircle/></div>
           <div className="text-2xl text-secondary-2">{title} </div>
           <div className="text-3xl text-gray-400"><BsPeopleFill/></div>
-          <div className="text-2xl text-secondary-2"> {players}+</div>
+        
         </div>
 
         <div className="flex items-center gap-x-3">
           <div className="text-3xl text-gray-400"><HiOutlineHashtag/></div>
-          {tags.map((tag, key) => (
-            <div key={key} className="bg-gray-400 bg-opacity-10 rounded-md text-primary-1 text-lg">{tag}</div>
-          ))}
         </div>
       </div>
     </div>
   )
 }
 
-export default GameCard
+export default InGameCard

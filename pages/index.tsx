@@ -1,18 +1,13 @@
 import GameCard from '../components/cards/gameCard'
 import MainLayout from '../layouts/mainLayout'
+import { Game } from '../typings';
+import requests from '../utils/requests';
 
+interface Props {
+  games: Game[]
+}
 
-const Home = () => {
-  const games = [
-    {
-      id: 1,
-      title: '狼人殺',
-      players: 9,
-      gameImageUrl: 'https://cdn.discordapp.com/attachments/1022347629344063581/1022347699422503003/d681acd50b03a07815103f41543abba8.jpeg',
-      tags: ['mind', '9']
-    }
-  ]
-
+const Home = ({games}: Props) => {
   return (
     <div className='space-y-6'>
       <section>
@@ -36,10 +31,23 @@ const Home = () => {
           )}
         </div>
       </section>
-
     </div>
   )
 }
 
 Home.layout = MainLayout
 export default Home
+
+export const getServerSideProps = async () => {
+  const [
+    games
+  ] = await Promise.all([
+    fetch(requests.fetchGames).then((res) => res.json()),
+  ])
+
+  return {
+    props: {
+      games: games,
+    },
+  }
+}
