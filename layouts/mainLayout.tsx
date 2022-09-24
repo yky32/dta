@@ -14,7 +14,10 @@ const MainLayout: LayoutProps = ({ children }) => {
       
       <main>
         <Navbar/>
-        {children}
+        <div className='px-8 py-3 bg-bg-1 h-screen'>
+          {children}
+        </div>
+        
       </main>
 
       <footer>

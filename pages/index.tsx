@@ -14,7 +14,7 @@ const Home = () => {
   ]
 
   return (
-    <div className='px-8 py-3 space-y-6 bg-bg-1 h-screen'>
+    <div className='space-y-6'>
       <section>
         <div className='text-2xl'>Please choose your game.</div>
       </section>
