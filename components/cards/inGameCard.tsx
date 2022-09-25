@@ -4,14 +4,12 @@ import {
 } from "react-icons/hi";
 import { BsPeopleFill } from "react-icons/bs";
 import { useRouter } from 'next/router'
+import { Game } from "../../typings";
 
 interface Props {
-  title: string
-  gameId: number
-  gameImageUrl: string
-  status: string
+  game: Game
 }
-function InGameCard({ title, gameId, gameImageUrl, status}: Props) {
+function InGameCard({ game }: Props) {
   const router = useRouter()
 
   const handleClick = (id: number) => {
@@ -20,11 +18,11 @@ function InGameCard({ title, gameId, gameImageUrl, status}: Props) {
 
   return (
     <div className="relative bg-white cursor-pointer bg-opacity-20 h-fit rounded-xl "
-      onClick={() => handleClick(gameId)}
+      onClick={() => handleClick(game.id)}
     >
       <div className="relative h-52">
         <Image
-          src={gameImageUrl}
+          src={game.gameImageUrl}
           className="rounded-lg object-cover"
           layout="fill"
         />
@@ -33,7 +31,7 @@ function InGameCard({ title, gameId, gameImageUrl, status}: Props) {
       <div className="px-4 py-4 space-y-1"> {/* game info */}
         <div className="flex items-center gap-x-3">
           <div className="text-3xl text-gray-400"><HiInformationCircle/></div>
-          <div className="text-2xl text-secondary-2">{title} </div>
+          <div className="text-2xl text-secondary-2">{game.title} </div>
           <div className="text-3xl text-gray-400"><BsPeopleFill/></div>
         
         </div>

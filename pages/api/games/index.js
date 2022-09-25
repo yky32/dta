@@ -1,5 +1,5 @@
 
-import data from './data'
+import data from '../data'
 
 // api/games
 export default function handler(req, res){
