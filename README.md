@@ -33,3 +33,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # wy-dev-nextjs
+
+## SSG vs SSR
+https://youtu.be/J1E2-hJZUVg?t=2695

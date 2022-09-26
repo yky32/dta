@@ -1,16 +1,14 @@
 import MainLayout from "../../layouts/mainLayout"
 import { useRouter } from 'next/router'
-import InGameCard from "../../components/cards/inGameCard"
 import requests from "../../utils/requests"
 import { Game } from "../../typings"
-import { GetServerSideProps } from "next"
-
+import InGameCard from "../../components/cards/inGameCard"
 
 interface Props {
   game: Game
 }
 
-const InGame = async ({game}: Props) => {
+const InGame = ({ game }: Props) => {
   const router = useRouter()
   const { gameId } = router.query
 
@@ -38,19 +36,13 @@ InGame.layout = MainLayout
 export default InGame
 
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  var params = context.params
-  
-  if (params) {
-    const game : Game = await fetch(`api/games/${params.gameId}`).then((res) => res.json())
-
-    return {
-      props: {
-        game : game
-      },
+export async function getServerSideProps(context: { params: any }) {
+  console.log(context.params.id)
+  const res = await fetch(requests.fetchGames + `/${context.params.id}`)
+  const game = await res.json()
+  return {
+    props: {
+      game: game
     }
   }
-  
-
-  
 }

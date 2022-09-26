@@ -2,14 +2,13 @@ import GameCard from '../components/cards/gameCard'
 import MainLayout from '../layouts/mainLayout'
 import { Game } from '../typings';
 import requests from '../utils/requests';
-
 interface Props {
   games: Game[]
 }
 
 const Home = ({games}: Props) => {
   return (
-    <div className='space-y-6'>
+    <div>
       <section>
         <div className='text-2xl'>Please choose your game.</div>
       </section>

@@ -13,10 +13,10 @@ const MainLayout: LayoutProps = ({ children }) => {
       </Head>
 
       <main>
-        <Navbar/>
-        <div className='px-8 py-6 bg-bg-1 h-screen'>
+        <Navbar />
+        <section className='space-y-6 px-6 py-6'>
           {children}
-        </div>
+        </section>
       </main>
 
       <footer>
