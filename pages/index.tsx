@@ -8,9 +8,9 @@ interface Props {
 
 const Home = ({games}: Props) => {
   return (
-    <div>
+    <div >
       <section>
-        <div className='text-2xl'>Please choose your game.</div>
+        <div className='text-2xl'>Please choose your game. haha</div>
       </section>
 
       <section>
