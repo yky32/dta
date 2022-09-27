@@ -1,27 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * > * {
-  font-family: 'Poppins', sans-serif;
-}
-
-.layout {
-  @apply 
-  px-6
-  py-6
+  font-family: "Poppins", sans-serif;
 }
 
 @layer base {
- 
+  .layout {
+    @apply px-6
+    py-6
+    bg-gray-400
+    bg-opacity-20
+    h-screen;
+  }
 }
 
 @layer components {
-  .card {
-    @apply border-gray-300
-    rounded-3xl
-    w-full
-    h-full;
-  }
+  
 }

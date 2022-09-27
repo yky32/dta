@@ -20,7 +20,7 @@ function GameCard({ title, gameId, gameImageUrl, players, tags }: Props) {
   }
 
   return (
-    <div className="relative bg-white cursor-pointer bg-opacity-20 h-fit rounded-xl "
+    <div className="relative cursor-pointer bg-white bg-opacity-30 h-fit rounded-xl "
       onClick={() => handleClick(gameId)}
     >
       <div className="relative h-52">
