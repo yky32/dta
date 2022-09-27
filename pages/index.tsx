@@ -8,13 +8,10 @@ interface Props {
 
 const Home = ({games}: Props) => {
   return (
-    <div >
-      <section>
-        <div className='text-2xl'>Please choose your game. haha</div>
-      </section>
+    <div>
+      <div className='text-2xl'>Please choose your game. haha</div>
 
-      <section>
-        <div className="grid 
+      <div className="grid 
         grid-cols-1 gap-4
         md:grid-cols-2 md:gap-8
         ">
@@ -29,7 +26,6 @@ const Home = ({games}: Props) => {
               />
           )}
         </div>
-      </section>
     </div>
   )
 }
