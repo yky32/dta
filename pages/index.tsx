@@ -8,7 +8,7 @@ interface Props {
 
 const Home = ({games}: Props) => {
   return (
-    <div>
+    <div className='space-y-4 layout'>
       <div className='text-2xl'>Please choose your game. haha</div>
 
       <div className="grid 

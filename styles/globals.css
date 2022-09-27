@@ -7,6 +7,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.layout {
+  @apply 
+  px-6
+  py-6
+}
+
 @layer base {
  
 }

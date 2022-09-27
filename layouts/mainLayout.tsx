@@ -14,9 +14,7 @@ const MainLayout: LayoutProps = ({ children }) => {
 
       <main>
         <Navbar />
-        <section className='px-6 py-6'>
-          {children}
-        </section>
+        {children}
       </main>
 
       <footer>

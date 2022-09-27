@@ -13,13 +13,10 @@ const InGame = ({ game }: Props) => {
   const { gameId } = router.query
 
   return (
-    <div className='space-y-6'>
-      <section>
-        <div className='text-2xl'>{gameId}</div>
-      </section>
-
-      <section>
-        <div className="grid 
+    <div className='space-y-4 layout'>
+      <div className='text-2xl'>{gameId}</div>
+      
+      <div className="grid 
         grid-cols-1 gap-4
         md:grid-cols-2 md:gap-8
         ">
@@ -27,7 +24,6 @@ const InGame = ({ game }: Props) => {
             game={game}
           />
         </div>
-      </section>
     </div>
   )
 }
