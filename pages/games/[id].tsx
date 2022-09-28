@@ -61,7 +61,7 @@ export default InGame
 
 
 export async function getServerSideProps(context: { params: any }) {
-  console.log(context.params.id)
+  console.log('--fecth: ',context.params.id)
   const res = await fetch(requests.fetchGames + `/${context.params.id}`)
   const game = await res.json()
   return {

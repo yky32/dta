@@ -2,7 +2,7 @@
 import { useRecoilState } from "recoil"
 import { gameConfigState } from "../atoms/modalAtom"
 
-function gameConfig() {
+const GameConfig = () => {
   const [gameConfig, setGameConfig] = useRecoilState(gameConfigState)
   return (
     <div>
@@ -12,4 +12,4 @@ function gameConfig() {
   )
 }
 
-export default gameConfig
+export default GameConfig
