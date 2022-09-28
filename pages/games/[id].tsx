@@ -23,14 +23,21 @@ const InGame = ({ game }: Props) => {
   const handleCreateGame = () => {
     // push to game setting
     var setting = {
-      question: 'How many people',
+      icon: 'people',
+      question: '人數',
       answer: '6',
       default: '9+'
     }
+    var setting2 = {
+      icon: 'combination',
+      question: '局陣形',
+      answer: [],
+      default: ['狼王', '女巫']
+    }
     setGameConfig(
-      { 
+      {
         id: Number(id),
-        settings: [setting]
+        settings: [setting, setting2]
       }
     )
     router.push(`/games/create`)
@@ -71,7 +78,7 @@ export default InGame
 
 
 export async function getServerSideProps(context: { params: any }) {
-  console.log('--fecth: ',context.params.id)
+  console.log('--fecth: ', context.params.id)
   const res = await fetch(requests.fetchGames + `/${context.params.id}`)
   const game = await res.json()
   return {
