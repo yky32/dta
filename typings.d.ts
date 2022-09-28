@@ -5,3 +5,7 @@ export interface Game {
   gameImageUrl: string
   tags: string[]
 }
+
+export interface GameConfig {
+  id: number
+}

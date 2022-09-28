@@ -2,6 +2,7 @@ import { AppProps } from 'next/app'
 import { ReactElement } from 'react'
 import '../styles/globals.css'
 import PageWithLayoutType from '../types/pageWithLayouts'
+import { RecoilRoot } from 'recoil'
 
 type AppLayoutProps = AppProps & {
   Component: PageWithLayoutType
@@ -10,10 +11,12 @@ type AppLayoutProps = AppProps & {
 
 function MyApp({ Component, pageProps }: AppLayoutProps) {
   const Layout = Component.layout || ((children: ReactElement) => <>{children}</>)
-return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+  return (
+    <RecoilRoot>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </RecoilRoot>
   )
 }
 
