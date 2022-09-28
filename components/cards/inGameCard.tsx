@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { 
+import {
   HiInformationCircle, HiOutlineHashtag
 } from "react-icons/hi";
 import { BsPeopleFill } from "react-icons/bs";
@@ -13,7 +13,7 @@ function InGameCard({ game }: Props) {
   const router = useRouter()
 
   const handleClick = (id: number) => {
-    
+
   }
 
   return (
@@ -22,6 +22,7 @@ function InGameCard({ game }: Props) {
     >
       <div className="relative h-52">
         <Image
+          alt=""
           src={game.gameImageUrl}
           className="rounded-lg object-cover"
           layout="fill"
@@ -30,14 +31,14 @@ function InGameCard({ game }: Props) {
 
       <div className="px-4 py-4 space-y-1"> {/* game info */}
         <div className="flex items-center gap-x-3">
-          <div className="text-3xl text-gray-400"><HiInformationCircle/></div>
+          <div className="text-3xl text-gray-400"><HiInformationCircle /></div>
           <div className="text-2xl text-secondary-2">{game.title} </div>
-          <div className="text-3xl text-gray-400"><BsPeopleFill/></div>
-        
+          <div className="text-3xl text-gray-400"><BsPeopleFill /></div>
+
         </div>
 
         <div className="flex items-center gap-x-3">
-          <div className="text-3xl text-gray-400"><HiOutlineHashtag/></div>
+          <div className="text-3xl text-gray-400"><HiOutlineHashtag /></div>
         </div>
       </div>
     </div>

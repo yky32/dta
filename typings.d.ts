@@ -8,4 +8,6 @@ export interface Game {
 
 export interface GameConfig {
   id: number
+  settings: any[]
 }
+

@@ -22,7 +22,17 @@ const InGame = ({ game }: Props) => {
   // method
   const handleCreateGame = () => {
     // push to game setting
-    setGameConfig({ id: Number(id) })
+    var setting = {
+      question: 'How many people',
+      answer: '6',
+      default: '9+'
+    }
+    setGameConfig(
+      { 
+        id: Number(id),
+        settings: [setting]
+      }
+    )
     router.push(`/games/create`)
   }
 
