@@ -7,10 +7,9 @@ const GameConfig = () => {
   const [gameConfig, setGameConfig] = useRecoilState(gameConfigState)
   return (
     <div className="config-form">
-      This is gameConfig {gameConfig!.id}
       {gameConfig?.settings.map((setting, key) => (
         <div className="flex" key={key}>
-          <QuestionRow data={setting}/>
+          <QuestionRow data={setting} />
         </div>
       ))}
     </div>
